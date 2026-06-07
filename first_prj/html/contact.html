@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="../css/header-2.css">
+    <link rel="stylesheet" href="../css/contact.css">
+
+  
+</head>
+<body>
+
+<div class="header-2">
+  <a href="welcome-page.html"><img src="../image/logo.svg" width="150px" height="50px"></a>
+  <div class="h2 dropdown" id="discover-dropdown">
+    <div class="text-h">DISCOVER</div>
+    <img src="../image/fleche.svg" width="30px">
+    <div class="dropdown-menu">
+      <a href="./our-story.html">🏍&nbsp; Our Story</a>
+      <a href="./why-choose-us.html">🏆&nbsp; Why Choose Us</a>
+      <a href="./find-a-dealer.html">📍&nbsp; Find a Dealer</a>
+      <a href="./contact.html">📞&nbsp; Contact Us</a>
+    </div>
+  </div>
+  <div class="h2 dropdown" id="brand-dropdown">
+    <div class="text-h">BRAND</div>
+    <img src="../image/fleche.svg" width="30px">
+    <div class="dropdown-menu">
+      <a href="./shop-page.html?cat=moto">Kawasaki Ninja</a>
+      <a href="./shop-page.html?cat=mule">Kawasaki Mule</a>
+      <a href="./shop-page.html?cat=jet-ski">Kawasaki Jet Ski</a>
+      <a href="./shop-page.html?cat=teryx">Kawasaki Teryx</a>
+    </div>
+  </div>
+  <div class="text-h"><a href="./warranty.html">WARRANTY</a></div>
+  <div class="text-h"><a href="login.html">Inscription</a></div>
+  <div class="text-h"><a href="../html/login.html?tab=signin">Connexion</a></div>
+  <div class="text-h"><a href="../html/contact.html">CONTACT</a></div>
+  <img src="../image/search-icon.svg" width="22px">
+  <div class="cart-icon-container" id="open-cart-trigger">
+    <img src="../image/shop-cart.svg" width="30px" id="cr">
+    <span id="cart-badge">0</span>
+  </div>
+</div>
+
+<!-- overlay fond sombre -->
+<div class="cart-overlay" id="cart-overlay"></div>
+
+<!-- CART -->
+<div class="cart">
+  <div class="cart-header">
+    <div class="cart-header-text">Your cart (<span id="cart-count">0</span>)</div>
+    <button class="close-btn" id="close-cart-btn">&times;</button>
+  </div>
+  <div class="cart-body-scroll" id="cart-items"></div>
+  <div class="cart-footer">
+    <h2 class="subtotal-label">Subtotal</h2>
+    <span class="total-price" id="cart-total">€0,00 EUR</span>
+  </div>
+  <button class="cart-check-out" id="checkout-btn">CHECK OUT</button>
+</div>
+
+<div class="contact-hero">
+  <p>GET IN TOUCH</p>
+  <h1>Contact<br>Us</h1>
+  <span>Whether you have a question about a model, need after-sales support, or want to visit a dealer — we're here for you.</span>
+</div>
+
+<div class="contact-body">
+
+  <div class="contact-info">
+
+    <div class="info-block">
+      <h3>REACH US</h3>
+      <div class="info-line">
+        <div class="ico">📞</div>
+        <div>
+          <strong>Sales</strong>
+          +1 800 VELOX
+        </div>
+      </div>
+      <div class="info-line">
+        <div class="ico">🔧</div>
+        <div>
+          <strong>After-sales</strong>
+          +1 800 EVN-SERV
+        </div>
+      </div>
+      <div class="info-line">
+        <div class="ico">✉️</div>
+        <div>
+          <strong>Email</strong>
+          contact@VELOX.com
+        </div>
+      </div>
+      <div class="info-line">
+        <div class="ico">📍</div>
+        <div>
+          <strong>Address</strong>
+          14 VELOX Drive, Detroit, MI 48201
+        </div>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <h3>OPENING HOURS</h3>
+      <div class="hours-grid">
+        <div class="hours-row">
+          <span class="day">Monday – Friday</span>
+          <span>8:00 – 18:00</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Saturday</span>
+          <span>9:00 – 14:00</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Sunday</span>
+          <span class="closed">Closed</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <h3>EMERGENCY LINE</h3>
+      <div class="info-line">
+        <div class="ico">🚨</div>
+        <div>
+          <strong>24/7 Roadside</strong>
+          Available for Protector & Elite plan holders only.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="contact-form-wrap">
+    <h2>Send us<br>a message</h2>
+    <div class="sub">We reply within 24 hours on business days.</div>
+
+    <form id="contact-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="fname">First name</label>
+          <input type="text" id="fname" placeholder="John" required>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last name</label>
+          <input type="text" id="lname" placeholder="Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="john@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="+1 000 000 0000">
+        </div>
+        <div class="form-group full">
+          <label for="subject">Subject</label>
+          <select id="subject" required>
+            <option value="" disabled selected>Select a topic</option>
+            <option>Product information</option>
+            <option>Warranty claim</option>
+            <option>After-sales support</option>
+            <option>Dealer location</option>
+            <option>Order & shipping</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label for="msg">Message</label>
+          <textarea id="msg" placeholder="Tell us how we can help you..." required></textarea>
+        </div>
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" id="agree" required>
+        <label for="agree" style="font-size:12px; font-weight:400; letter-spacing:0; text-transform:none; color:#666;">
+          I agree to VELOX's privacy policy and consent to being contacted regarding my inquiry.
+        </label>
+      </div>
+
+      <button type="submit" class="btn-submit">Send message →</button>
+      <div class="success-msg" id="success-msg">✓ Message sent! We'll get back to you shortly.</div>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 VELOX — All rights reserved.
+</footer>
+
+<script src="../js/contact.js"></script>
+</body>
+</html>

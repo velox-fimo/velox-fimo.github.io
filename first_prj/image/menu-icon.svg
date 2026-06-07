@@ -1,0 +1,8 @@
+<svg viewBox="0 0 24 19.57" height="19.57" width="24" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(-21.5 -24.5)" id="menu-icon">
+    <path fill="#fff" transform="translate(21.5 25)" d="M24,.5H0v-1H24Z" data-name="Line 1" id="Line_1"></path>
+    <path fill="#fff" transform="translate(21.5 30)" d="M24,.5H0v-1H24Z" data-name="Line 2" id="Line_2"></path>
+    <path fill="#fff" transform="translate(21.5 35)" d="M24,.5H0v-1H24Z" data-name="Line 3" id="Line_3"></path>
+    <path fill="#fff" transform="translate(21 44)" d="M6.02,0,6.013-4.9H5.264L3.353-1.652,1.407-4.9H.658V0h.868V-3.206L3.136-.56h.406l1.61-2.688L5.159,0ZM8.953-.763V-2.114h2.366v-.749H8.953V-4.137H11.62V-4.9H8.043V0h3.675V-.763ZM16.884-4.9v3.318L14.182-4.9h-.749V0h.9V-3.318L17.038,0h.749V-4.9ZM21.91.07a1.978,1.978,0,0,0,2.142-2.2V-4.9h-.9v2.73c0,1.008-.448,1.442-1.239,1.442s-1.246-.434-1.246-1.442V-4.9h-.91v2.765A1.98,1.98,0,0,0,21.91.07Z" data-name="Path 61" id="Path_61"></path>
+  </g>
+</svg>
