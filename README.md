@@ -24,4 +24,4 @@ https://velox-fimo.github.io/first_prj/html/welcome-page.html
 - Trouver un revendeur
 
 ## 👤 Auteur
-Réalisé par : velox-fimo
+Réalisé par : OUMOKHTAR MOHAMED
