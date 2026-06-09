@@ -7,10 +7,8 @@ function saveCart(cart) {
   localStorage.setItem("myCart", JSON.stringify(cart));
 }
 function updateBadge() {
-  const total = getCart().length;
-  const badge = document.getElementById("cart-badge");
+  document.querySelectorAll("#cart-badge").forEach(b => b.textContent = total);
   const count = document.getElementById("cart-count");
-  if (badge) badge.textContent = total;
   if (count) count.textContent = total;
 }
 function renderCart() {
@@ -60,13 +58,13 @@ function removeItem(idx) {
 }
 
 
-document.getElementById("open-cart-trigger").addEventListener("click", (e) => {
+document.querySelectorAll("#open-cart-trigger").forEach(trigger => trigger.addEventListener("click", (e) => {
   e.preventDefault();
   document.querySelector(".cart").classList.add("show-cart");
   document.getElementById("cart-overlay").classList.add("active");
   document.body.style.overflow = "hidden";
   renderCart();
-});
+}));
 document.getElementById("close-cart-btn").addEventListener("click", () => {
   document.querySelector(".cart").classList.remove("show-cart");
   document.getElementById("cart-overlay").classList.remove("active");

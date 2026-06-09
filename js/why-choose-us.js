@@ -1,7 +1,7 @@
 // helpers
 function getCart() { try { return JSON.parse(localStorage.getItem("myCart")) || []; } catch { return []; } }
 function saveCart(cart) { localStorage.setItem("myCart", JSON.stringify(cart)); }
-function updateBadge() { const total = getCart().length; const badge = document.getElementById("cart-badge"); const count = document.getElementById("cart-count"); if (badge) badge.textContent = total; if (count) count.textContent = total; }
+function updateBadge() { const total = getCart().length; document.querySelectorAll("#cart-badge").forEach(b => b.textContent = total); const count = document.getElementById("cart-count"); if (count) count.textContent = total; }
 function removeItem(idx) { const cart = getCart(); cart.splice(idx, 1); saveCart(cart); renderCart(); updateBadge(); }
 
 function renderCart() {
@@ -43,17 +43,15 @@ function renderCart() {
   if (totalEl) totalEl.textContent = `€${subtotal.toFixed(2)} EUR`;
 }
 
-// open / close cart
-const openCartTrigger = document.querySelector("#open-cart-trigger");
-if (openCartTrigger) {
-  openCartTrigger.addEventListener("click", (e) => {
+document.querySelectorAll("#open-cart-trigger").forEach(trigger => {
+  trigger.addEventListener("click", (e) => {
     e.preventDefault();
     document.querySelector(".cart").classList.add("show-cart");
     document.getElementById("cart-overlay").classList.add("active");
     document.body.style.overflow = "hidden";
     renderCart();
   });
-}
+});
 const closeBtn = document.querySelector("#close-cart-btn");
 if (closeBtn) closeBtn.addEventListener("click", () => { document.querySelector(".cart").classList.remove("show-cart"); document.getElementById("cart-overlay").classList.remove("active"); document.body.style.overflow = ""; });
 document.getElementById("cart-overlay").addEventListener("click", () => { document.querySelector(".cart").classList.remove("show-cart"); document.getElementById("cart-overlay").classList.remove("active"); document.body.style.overflow = ""; });

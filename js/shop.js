@@ -59,14 +59,13 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-const openCartTrigger = document.querySelector("#open-cart-trigger");
-if (openCartTrigger) {
-  openCartTrigger.addEventListener("click", (event) => {
+document.querySelectorAll("#open-cart-trigger").forEach(trigger => {
+  trigger.addEventListener("click", (event) => {
     event.preventDefault();
     const cart = document.querySelector(".cart");
     if (cart) cart.classList.add("show-cart");
   });
-}
+});
 
 const close_button = document.querySelector("#close-cart-btn");
 if (close_button) {
@@ -78,8 +77,7 @@ if (close_button) {
 }
 
 function renderCartUI() {
-  const cartBadge = document.querySelector("#cart-badge");
-  if (cartBadge) cartBadge.textContent = cartItems.length;
+ document.querySelectorAll("#cart-badge").forEach(b => b.textContent = cartItems.length);
 
   if (!cartBody) return;
 

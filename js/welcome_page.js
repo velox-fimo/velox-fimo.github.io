@@ -1,22 +1,18 @@
-const openCartTrigger = document.querySelector("#open-cart-trigger");
-if (openCartTrigger) {
-  openCartTrigger.addEventListener("click", (event) => {
+document.querySelectorAll("#open-cart-trigger").forEach(trigger => {
+  trigger.addEventListener("click", (event) => {
     event.preventDefault();
     const cart = document.querySelector(".cart"); 
     if (cart) cart.classList.add("show-cart");
     renderCart();
   });
-}
-
-const close_button = document.querySelector("#close-cart-btn");
-if (close_button) {
-  close_button.addEventListener("click", (event) => {
+});
+document.querySelectorAll("#close-cart-btn").forEach(btn => {
+  btn.addEventListener("click", (event) => {
     event.preventDefault();
     const cart = document.querySelector(".cart");
     if (cart) cart.classList.remove("show-cart");
   });
-}
-
+});
 
 document.getElementById("checkout-btn").addEventListener("click", () => {
   const cart = getCart();
@@ -29,9 +25,8 @@ function saveCart(cart) { localStorage.setItem("myCart", JSON.stringify(cart)); 
 
 function updateBadge() {
   const total = getCart().length;
-  const badge = document.getElementById("cart-badge");
+ document.querySelectorAll("#cart-badge").forEach(b => b.textContent = total);
   const count = document.getElementById("cart-count");
-  if (badge) badge.textContent = total;
   if (count) count.textContent = total;
 }
 
