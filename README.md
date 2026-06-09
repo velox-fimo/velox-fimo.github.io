@@ -12,10 +12,6 @@ https://velox-fimo.github.io/first_prj/html/welcome-page.html
 - CSS
 - JavaScript
 
-## ⚠️ Limitations connues
-- Site optimisé pour **PC uniquement**
-- La version mobile n'a pas pu être complétée par manque de temps
-  en raison d'une maladie en cours de projet
 
 ## 📄 Pages disponibles
 - Page d'accueil (welcome-page)

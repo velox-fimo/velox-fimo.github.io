@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body{
+    padding: 0;
+  }
+  
+  .menu{
+    transform: translateX(-100%);
+  }
+  
+
+  .menu-head{
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+  }
+  .menu-close-btn{
+    background-color: transparent;
+    border: none;
+ position: absolute;
+  color: #333333;
+  font-size: 40px;
+  width: 32px;
+  height: 32px;
+  left: 10px;
+  margin-top: 1px;
+    
+  }
+  .text-menu{
+    max-width: 95%;
+    margin-left: 8px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .inner-text-menu{
+    border-bottom:1px solid rgb(202, 202, 202) ;
+    padding-bottom: 20px;
+    
+  }
+  .inner-1 , .inner-2{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-left: 15px;
+     border-bottom:1px solid rgb(202, 202, 202) ;
+     padding-bottom: 20px;
+  }
+  
+</style>
+<body>
+ <div class="menu">
+<div class="menu-head">
+  <button class="menu-close-btn">&times;</button>
+  <img src="../image/logo.svg">
+</div>
+<div class="text-menu">
+<div class="inner-text-menu discover">DISCOVER</div>
+<div class="inner-1">
+    <div>OUR STORY</div>    
+    <div>WHY CHOOSE US</div>    
+    <div>FIND A DEALER</div>    
+    <div>CONTACT US</div>
+  </div>
+<div class="inner-text-menu brand">BRAND</div>
+<div class="inner-2">    
+    <div>KAWASAKI NINJA</div>    
+    <div>KAWASAKI MULE</div>    
+    <div>KAWASAKI JET SKI</div>    
+    <div>KAWASAKI TERYX</div>
+  </div>
+<div class="inner-text-menu">WARRANTY</div>
+<div class="inner-text-menu">INSCRIPTION</div>
+<div class="inner-text-menu">CONNEXION</div>
+<div class="inner-text-menu">CONTACT</div>
+</div>
+  </div>
+  
+  
+<script>
+ 
+  document.querySelector(".discover").addEventListener("click",(x)=>{x.taeget.classList.toggle("inner-1")});
+  document.querySelector(".brand").addEventListener("click",(x)=>{x.target.classList.toggle("inner-1")});
+document.querySelector(".menu-btn").addEventListener("click",(x)=>{
+  document.querySelector(".menu").classList.remove(".menu");
+})
+document.querySelector(".menu-close-btn").addEventListener("click",(x)=>{
+   document.querySelector(".menu").classList.add(".menu");
+})
+
+</script>
+</body>
+</html>

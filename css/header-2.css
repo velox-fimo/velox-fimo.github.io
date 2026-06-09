@@ -1,0 +1,121 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+.header-2{
+  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  gap: 20px;
+  display: flex;
+  flex-shrink: 0;
+  padding: 0px 10px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+
+  height: 50px;
+  background-color: black;
+}
+    
+.h2{
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+.text-h{ 
+  position: relative;
+}
+.text-h::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: white;
+  transform: scaleX(0);          
+  transform-origin: left;        
+  transition: transform 0.3s ease;
+}
+.text-h:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.header-2 *{
+  cursor: pointer;
+}
+
+
+.cart-icon-container {
+  position: relative; 
+  display: inline-block;
+  cursor: pointer;
+}
+
+#cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #e63946 !important;
+  color: white !important;
+  font-size: 11px !important;
+  font-weight: bold !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1.5px solid #000000 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+.text-h a {
+  color: white;
+  text-decoration: none;
+}
+.header-2 img {
+  display: block;
+  border-radius: 0;
+  max-width: unset;
+  object-fit: unset;
+}
+.dropdown { position: relative; }
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: black;
+  min-width: 200px;
+  flex-direction: column;
+  z-index: 9999;
+  border-top: 2px solid #5cba47;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #1a1a1a;
+  padding-left: 28px;
+  color: #5cba47;
+}
+
+
+.dropdown.open .dropdown-menu {
+  display: flex;
+}

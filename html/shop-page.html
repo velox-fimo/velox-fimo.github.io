@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shop-page</title>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/features.css">
+  <link rel="stylesheet" href="../css/header-2.css">
+  <link rel="stylesheet" href="../css/shop-page.css">
+</head>
+<body>
+<div class="header-phone">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.2" class="menu-btn">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <a href="contact.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></a>
+        </svg>
+      </div>
+      <a href="welcome-page.html"><img src="../image/logo.svg" width="150px" height="40px" class="logo"></a>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <div class="cart-icon-container" id="open-cart-trigger">
+            <img src="../image/shop-cart.svg" width="30px" id="cr">
+            <span id="cart-badge">0</span>
+        </div>
+      </div>
+  </div>
+
+  <div class="header-2">
+  <a href="welcome-page.html"><img src="../image/logo.svg" width="150px" height="50px"></a>
+  <div class="h2 dropdown" id="discover-dropdown">
+    <div class="text-h">DISCOVER</div>
+    <img src="../image/fleche.svg" width="30px">
+    <div class="dropdown-menu">
+      <a href="./our-story.html">🏍&nbsp; Our Story</a>
+      <a href="./why-choose-us.html">🏆&nbsp; Why Choose Us</a>
+      <a href="./find-a-dealer.html">📍&nbsp; Find a Dealer</a>
+      <a href="./contact.html">📞&nbsp; Contact Us</a>
+    </div>
+  </div>
+  <div class="h2 dropdown" id="brand-dropdown">
+    <div class="text-h">BRAND</div>
+    <img src="../image/fleche.svg" width="30px">
+    <div class="dropdown-menu">
+      <a href="./shop-page.html?cat=moto">Kawasaki Ninja</a>
+      <a href="./shop-page.html?cat=mule">Kawasaki Mule</a>
+      <a href="./shop-page.html?cat=jet-ski">Kawasaki Jet Ski</a>
+      <a href="./shop-page.html?cat=teryx">Kawasaki Teryx</a>
+    </div>
+  </div>
+  <div class="text-h"><a href="./warranty.html">WARRANTY</a></div>
+  <div class="text-h"><a href="login.html">Inscription</a></div>
+  <div class="text-h"><a href="../html/login.html?tab=signin">Connexion</a></div>
+  <div class="text-h"><a href="../html/contact.html">CONTACT</a></div>
+  <img src="../image/search-icon.svg" width="22px">
+  <div class="cart-icon-container" id="open-cart-trigger">
+    <img src="../image/shop-cart.svg" width="30px" id="cr">
+    <span id="cart-badge">0</span>
+  </div>
+</div>
+
+ 
+  <div class="filter-bar">
+    <button class="filter-btn active" data-cat="all"><span class="dot"></span> All</button>
+    <button class="filter-btn" data-cat="moto"><span class="dot"></span> Moto</button>
+    <button class="filter-btn" data-cat="mule"><span class="dot"></span> Mule</button>
+    <button class="filter-btn" data-cat="jet-ski"><span class="dot"></span> Jet Ski</button>
+    <button class="filter-btn" data-cat="teryx"><span class="dot"></span> Teryx</button>
+  </div>
+
+
+  <div class="product-container-grid"></div>
+
+  
+  <div class="cart">
+    <div class="cart-header">
+      <div class="cart-header-text">Your cart (0)</div>
+      <button class="close-btn" id="close-cart-btn">&times;</button>
+    </div>
+    
+    <div class="cart-body-scroll"></div>
+
+    <div class="cart-footer">
+      <h2 class="subtotal-label">Subtotal</h2>
+      <span class="total-price">€0,00 EUR</span>
+    </div>
+    <button class="cart-check-out">CHECK OUT</button>
+  </div>
+
+<div class="menu">
+<div class="menu-head">
+  <button class="menu-close-btn">&times;</button>
+  <img src="../image/logo.svg">
+</div>
+<div class="text-menu">
+<div class="inner-text-menu discover">DISCOVER</div>
+<div class="inner-1">
+    <a href="our-story.html"><div>OUR STORY</div></a>    
+    <a href="why-choose-us.html"><div>WHY CHOOSE US</div> </a>   
+    <a href="find-a-dealer.html"><div>FIND A DEALER</div></a>    
+    <a href="contact.html"><div>CONTACT US</div></a>
+  </div>
+<div class="inner-text-menu brand">BRAND</div>
+<div class="inner-2">    
+    <a href="./shop-page.html?cat=moto">KAWASAKI NINJA</a>    
+    <a href="./shop-page.html?cat=mule">KAWASAKI MULE</a>    
+    <a href="./shop-page.html?cat=jet-ski">KAWASAKI JET SKI</a>    
+    <a href="./shop-page.html?cat=teryx">KAWASAKI TERYX</a href="">
+  </div>
+<a href="warranty.html" class="inner-text-menu">WARRANTY</a>
+<a href="login.html" class="inner-text-menu">INSCRIPTION</a>
+<a href="login.html" class="inner-text-menu">CONNEXION</a>
+<a href="contact.html" class="inner-text-menu">CONTACT</a>
+</div>
+  </div>
+
+   <footer style="background-color:black;color:rgba(255,255,255,0.4);text-align:center;padding:20px;font-size:12px;letter-spacing:1px;">
+    © 2026 VELOX — All rights reserved.
+  </footer>
+  <script type="module" src="../js/shop.js"></script>
+</body>
+</html>
