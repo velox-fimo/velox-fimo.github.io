@@ -14,7 +14,6 @@ https://velox-fimo.github.io/html/welcome-page.html
 - JavaScript (DOM, localStorage, RegEx)
 
 ## 📄 Pages disponibles
-- index.html — Page d'accueil
 - welcome-page.html — Page principale
 - shop-page.html — Affichage et filtrage des produits
 - product-page.html — Détail produit
