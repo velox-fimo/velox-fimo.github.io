@@ -142,8 +142,9 @@ a {
 #cr { position: relative; z-index: 9999 !important; cursor: pointer; }
 
 .features-section {
+  margin:0px 10px;
   gap: 15px;
-  margin-top: 10px;
+  margin-top: 25px;
   display: flex;
   color: white;
   justify-content: space-between;
@@ -154,7 +155,7 @@ a {
 .feat3 { margin-left: 10px; }
 .feat3-ico3 { width: 50px; }
 
-.features-section-phone { gap: 8px; display: none; align-items: center; justify-content: start; margin-left: 8px; }
+.features-section-phone {margin-top: 40px; gap: 8px; display: none; align-items: center; justify-content: start; margin-left: 18px; }
 
 .dropdown { position: relative; }
 .dropdown-menu { display: none; position: absolute; top: 50px; left: 0; background-color: black; min-width: 200px; flex-direction: column; z-index: 9999; border-top: 2px solid #5cba47; }
