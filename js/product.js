@@ -31,7 +31,7 @@ export const products = [
     date: 2025,
     name: "NINJA® ZX™-14R ABS",
     price: 19900,
-    img: ["../image/products/moto-4-1.jpg", "../image/products/moto-4-2.jpg", "../image/products/moto-4-3.jpg"],
+    img: ["../image/products/moto-4-1.jpg", "../image/products/moto-4-2.jpg", "../image/products/moto-4-3.jpg", "../image/products/moto-4-2.jpg"],
     img_background: "../image/products/moto-4.jpg",
     features: ["Dual power modes", "Back-torque limiting slipper clutch", "3-mode Kawasaki TRaction Control (KTRC)", "High-grade dash meter", "Stainless steel braided clutch and brake lines", "Brembo 4-piston M50 monobloc calipers", "Dual semi-floating 310mm discs"]
   },
@@ -58,7 +58,7 @@ export const products = [
     date: 2025,
     name: "TERYX4™",
     price: 18500,
-    img: ["../image/products/teryx-7-1.jpg", "../image/products/teryx-7-2.jpg", "../image/products/teryx-7-3.jpg"],
+    img: ["../image/products/teryx-7-1.jpg", "../image/products/teryx-7-2.jpg", "../image/products/teryx-7-3.jpg", "../image/products/teryx-7-2.jpg"],
     img_background: "../image/products/teryx-7.jpg",
     features: ["Maxxis® Bighorn tires", "FOX Podium 2.0 piggyback shocks", "Additional DC outlet in rear"]
   },
@@ -76,7 +76,7 @@ export const products = [
     date: 2024,
     name: "JET SKI® SX-R™ 160",
     price: 13800,
-    img: ["../image/products/jetski-9-1.jpg", "../image/products/jetski-9-2.jpg", "../image/products/jetski-9-3.jpg"],
+    img: ["../image/products/jetski-9-1.jpg", "../image/products/jetski-9-2.jpg", "../image/products/jetski-9-3.jpg", "../image/products/jetski-9-2.jpg"],
     img_background: "../image/products/jetski-9.jpg",
     features: ["Easy to manage power", "Outstanding acceleration", "Large deck", "Small-item storage, low fuel and engine warning lights"]
   },
@@ -85,7 +85,7 @@ export const products = [
     date: 2025,
     name: "JET SKI® ULTRA® 160LX-S ANGLER",
     price: 21500,
-    img: ["../image/products/jetski-10-1.jpg", "../image/products/jetski-10-2.jpg", "../image/products/jetski-10-3.jpg"],
+    img: ["../image/products/jetski-10-1.jpg", "../image/products/jetski-10-2.jpg", "../image/products/jetski-10-3.jpg", "../image/products/jetski-10-2.jpg",],
     img_background: "../image/products/jetski-10.jpg",
     features: ["Launch control and power mode selection", "Electronic cruise control", "LED accent lights", "Front fishing rod holder", "Large fuel tank capacity (21.1 gallons)", "Flat two-section fishing bench seat", "ORCA 58QT cooler"]
   }
