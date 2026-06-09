@@ -1,27 +1,36 @@
-# 🏍️ Moto | Jet-Ski | Mule
+# 🏍️ VELOX — Moto | Jet-Ski | Mule | Teryx
 
 ## 📌 Description
-Site web dédié aux véhicules de loisirs tout-terrain et nautiques.
-Découvrez notre sélection de motos, jet-skis et mules.
+VELOX est un site e-commerce dédié à la vente de véhicules Kawasaki
+(motos, jet-skis, mules et teryx). Il permet de parcourir les produits,
+les filtrer par catégorie, les ajouter au panier et simuler une commande.
 
 ## 🔗 Lien du site
-https://velox-fimo.github.io/first_prj/html/welcome-page.html
+https://velox-fimo.github.io/html/welcome-page.html
 
 ## 🛠️ Technologies utilisées
-- HTML
-- CSS
-- JavaScript
-
+- HTML5 (balises sémantiques)
+- CSS3 (Flexbox, Grid, Media Queries)
+- JavaScript (DOM, localStorage, RegEx)
 
 ## 📄 Pages disponibles
-- Page d'accueil (welcome-page)
-- Page produits
-- Page boutique
-- Page contact
-- Page login
-- Page garantie
-- Notre histoire
-- Trouver un revendeur
+- index.html — Page d'accueil
+- welcome-page.html — Page principale
+- shop-page.html — Affichage et filtrage des produits
+- product-page.html — Détail produit
+- login.html — Inscription / Connexion
+- contact.html — Formulaire de contact
+- warranty.html — Garantie
+- our-story.html — Notre histoire
+- why-choose-us.html — Pourquoi nous choisir
+- find-a-dealer.html — Trouver un revendeur
 
-## 👤 Auteur
-Réalisé par : OUMOKHTAR MOHAMED
+## 🚀 Instructions d'utilisation
+1. Ouvrir le lien du site
+2. Naviguer via le menu
+3. Filtrer les produits par catégorie
+4. Ajouter des produits au panier
+5. S'inscrire ou se connecter
+
+## 👥 Membres du groupe
+- OUMOKHTAR MOHAMED
