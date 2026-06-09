@@ -1,4 +1,3 @@
-
 function getCart() {
   try { return JSON.parse(localStorage.getItem("myCart")) || []; }
   catch { return []; }
@@ -6,11 +5,16 @@ function getCart() {
 function saveCart(cart) {
   localStorage.setItem("myCart", JSON.stringify(cart));
 }
+
 function updateBadge() {
+  const total = getCart().length;
   document.querySelectorAll("#cart-badge").forEach(b => b.textContent = total);
   const count = document.getElementById("cart-count");
   if (count) count.textContent = total;
+  // badges avec classe (utilisés sur certaines pages)
+  document.querySelectorAll(".cart-badge-el").forEach(b => b.textContent = total);
 }
+
 function renderCart() {
   const cart = getCart();
   const container = document.getElementById("cart-items");
@@ -36,7 +40,7 @@ function renderCart() {
           <p class="text-cart-2">${product.name}</p>
           <p class="text-cart-4">ADDITIONAL VEHICLE FEATURES:</p>
           <ul class="text-cart-5">
-            <li>Assist & Slipper Clutch</li>
+            <li>Assist &amp; Slipper Clutch</li>
             <li>Premium Performance Components</li>
           </ul>
           <div class="cart-info-product-2">
@@ -49,6 +53,7 @@ function renderCart() {
   container.innerHTML = html;
   if (totalEl) totalEl.textContent = `€${subtotal.toFixed(2)} EUR`;
 }
+
 function removeItem(idx) {
   const cart = getCart();
   cart.splice(idx, 1);
@@ -56,7 +61,6 @@ function removeItem(idx) {
   renderCart();
   updateBadge();
 }
-
 
 document.querySelectorAll("#open-cart-trigger").forEach(trigger => trigger.addEventListener("click", (e) => {
   e.preventDefault();
@@ -90,7 +94,6 @@ window.addEventListener("storage", (e) => {
   if (e.key === "myCart") { updateBadge(); renderCart(); }
 });
 
-
 const productinfo = JSON.parse(localStorage.getItem("productinfo"));
 
 document.querySelector(".product-detail").innerHTML = `
@@ -117,10 +120,9 @@ document.querySelector(".product-detail").innerHTML = `
         <li>${productinfo.features[3] || ''}</li> 
       </ul>
       <button class="add-to-cart-btn">ADD TO CART</button>
-      <button class="back-btn" onclick="history.back()">← BACK</button>
+      <button class="back-btn">← BACK</button>
     </div> 
   </div>`;
-
 
 const mainImage = document.querySelector(".image-product");
 document.querySelectorAll(".gal-image img").forEach((thumb) => {
@@ -128,7 +130,6 @@ document.querySelectorAll(".gal-image img").forEach((thumb) => {
     mainImage.src = thumb.src;
   });
 });
-
 
 document.querySelector(".add-to-cart-btn").addEventListener("click", () => {
   const cart = getCart();
@@ -138,40 +139,41 @@ document.querySelector(".add-to-cart-btn").addEventListener("click", () => {
   alert("Produit ajouté au panier !");
 });
 
-
-updateBadge();
-document.querySelector(".back-btn").addEventListener("click",()=>{
+document.querySelector(".back-btn").addEventListener("click", () => {
   window.location.href = "shop-page.html";
-})
-
-
+});
 
 document.getElementById("discover-dropdown").addEventListener("click", (e) => {
   e.stopPropagation();
   document.getElementById("discover-dropdown").classList.toggle("open");
   document.getElementById("brand-dropdown").classList.remove("open");
 });
-
 document.getElementById("brand-dropdown").addEventListener("click", (e) => {
   e.stopPropagation();
   document.getElementById("brand-dropdown").classList.toggle("open");
   document.getElementById("discover-dropdown").classList.remove("open");
 });
-
 document.addEventListener("click", (e) => {
-  if (!e.target.closest("#discover-dropdown")) {
-    document.getElementById("discover-dropdown").classList.remove("open");
-  }
-  if (!e.target.closest("#brand-dropdown")) {
-    document.getElementById("brand-dropdown").classList.remove("open");
-  }
+  if (!e.target.closest("#discover-dropdown")) document.getElementById("discover-dropdown").classList.remove("open");
+  if (!e.target.closest("#brand-dropdown")) document.getElementById("brand-dropdown").classList.remove("open");
 });
 
- document.querySelector(".discover").addEventListener("click",(x)=>{document.querySelector(".inner-1").classList.toggle("inner-1-show")});
-  document.querySelector(".brand").addEventListener("click",(x)=>{document.querySelector(".inner-2").classList.toggle("inner-2-show")});
-document.querySelector(".menu-btn").addEventListener("click",(x)=>{
-  document.querySelector(".menu").classList.add("show");
-})
-document.querySelector(".menu-close-btn").addEventListener("click",(x)=>{
-   document.querySelector(".menu").classList.remove("show");
-})
+document.querySelector(".header-phone").addEventListener("click", (e) => {
+  const menuBtn = e.target.closest(".menu-btn, [class*='menu-btn']");
+  if (menuBtn) document.querySelector(".menu").classList.add("show");
+});
+
+const menuSvg = document.querySelector(".menu-btn");
+if (menuSvg) menuSvg.addEventListener("click", () => document.querySelector(".menu").classList.add("show"));
+
+document.querySelector(".menu-close-btn").addEventListener("click", () => {
+  document.querySelector(".menu").classList.remove("show");
+});
+document.querySelector(".discover").addEventListener("click", () => {
+  document.querySelector(".inner-1").classList.toggle("inner-1-show");
+});
+document.querySelector(".brand").addEventListener("click", () => {
+  document.querySelector(".inner-2").classList.toggle("inner-2-show");
+});
+
+updateBadge();
